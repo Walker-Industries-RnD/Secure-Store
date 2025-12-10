@@ -1,0 +1,11 @@
+C:\Users\WalkerDev\Documents\XRUIOS Application Suite\Secure Store\bin\Release\net9.0\Secure Store.deps.json
+C:\Users\WalkerDev\Documents\XRUIOS Application Suite\Secure Store\bin\Release\net9.0\Secure Store.dll
+C:\Users\WalkerDev\Documents\XRUIOS Application Suite\Secure Store\bin\Release\net9.0\Secure Store.pdb
+C:\Users\WalkerDev\Documents\XRUIOS Application Suite\Secure Store\obj\Release\net9.0\Secure Store.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\WalkerDev\Documents\XRUIOS Application Suite\Secure Store\obj\Release\net9.0\Secure Store.AssemblyInfoInputs.cache
+C:\Users\WalkerDev\Documents\XRUIOS Application Suite\Secure Store\obj\Release\net9.0\Secure Store.AssemblyInfo.cs
+C:\Users\WalkerDev\Documents\XRUIOS Application Suite\Secure Store\obj\Release\net9.0\Secure Store.csproj.CoreCompileInputs.cache
+C:\Users\WalkerDev\Documents\XRUIOS Application Suite\Secure Store\obj\Release\net9.0\Secure Store.dll
+C:\Users\WalkerDev\Documents\XRUIOS Application Suite\Secure Store\obj\Release\net9.0\refint\Secure Store.dll
+C:\Users\WalkerDev\Documents\XRUIOS Application Suite\Secure Store\obj\Release\net9.0\Secure Store.pdb
+C:\Users\WalkerDev\Documents\XRUIOS Application Suite\Secure Store\obj\Release\net9.0\ref\Secure Store.dll
