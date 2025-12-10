@@ -1,5 +1,5 @@
 <p align="center"> 
-  <img src="Assets/Secure Store.png" alt="Secure Store" width="80%"/> 
+  <img src="https://github.com/Walker-Industries-RnD/Secure-Store/blob/main/docs/assets/secure-store.png" alt="Secure Store" width="80%"/> 
 </p>
 
 **A tiny, cross-platform, fully local, per-user encrypted-at-rest secure key/value store that only the current logged-in user can read or write.**
