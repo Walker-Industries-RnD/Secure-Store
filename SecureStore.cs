@@ -12,38 +12,65 @@ namespace Secure_Store
             {
                 get
                 {
-                    // Cross‑platform per‑session location
-                    string? runtimeDir = Environment.GetEnvironmentVariable("XDG_RUNTIME_DIR");
-                    if (!string.IsNullOrEmpty(runtimeDir))
-                        return runtimeDir; // Linux, auto-clears on logout
-
-                    if (OperatingSystem.IsWindows())
-                        return Path.Combine(
-                            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-                            "XRUIOS_RUNTIME"
-                        );
-
-                    // macOS fallback
-                    return "/tmp"; // cleared on restart/logout
+                    // Use per-session temp directory on all platforms
+                    string sessionDir = Path.Combine(Path.GetTempPath(), "SECURE_STORE" + Environment.UserName);
+                    Directory.CreateDirectory(sessionDir);
+                    return sessionDir;
                 }
             }
 
             private static string GetPath(string key) =>
-                Path.Combine(BasePath, $"xr_{key}.dat");
+                Path.Combine(BasePath, $"secstr_{key}.dat");
+
+            private static void EnsureFolder()
+            {
+                if (!Directory.Exists(BasePath))
+                {
+                    Directory.CreateDirectory(BasePath);
+
+                    if (OperatingSystem.IsWindows())
+                    {
+                        try
+                        {
+                            var dirInfo = new DirectoryInfo(BasePath);
+                            var dirSecurity = dirInfo.GetAccessControl();
+
+                            // Remove inheritance & keep only explicit rules
+                            dirSecurity.SetAccessRuleProtection(true, false);
+
+                            // Give full control to current user only
+                            var currentUser = WindowsIdentity.GetCurrent().User!;
+                            dirSecurity.AddAccessRule(new FileSystemAccessRule(
+                                currentUser,
+                                FileSystemRights.FullControl,
+                                AccessControlType.Allow
+                            ));
+
+                            dirInfo.SetAccessControl(dirSecurity);
+
+                            // Hide the folder from casual browsing
+                            dirInfo.Attributes |= FileAttributes.Hidden | FileAttributes.System;
+                        }
+                        catch
+                        {
+                            // If ACLs fail, fall back silently; still writable
+                        }
+                    }
+                }
+            }
 
             public static void Set<T>(string key, T value)
             {
-                Directory.CreateDirectory(BasePath);
+                EnsureFolder();
 
                 string path = GetPath(key);
                 string json = JsonSerializer.Serialize(value);
-
                 File.WriteAllText(path, json);
 
-                if (OperatingSystem.IsWindows())
-                    ApplyWindowsAcl(path);
-                else
+                if (!OperatingSystem.IsWindows())
+                {
                     ApplyUnixPermissions(path);
+                }
             }
 
             public static T? Get<T>(string key)
@@ -54,26 +81,6 @@ namespace Secure_Store
 
                 string json = File.ReadAllText(path);
                 return JsonSerializer.Deserialize<T>(json);
-            }
-
-            private static void ApplyWindowsAcl(string path)
-            {
-                var fileInfo = new FileInfo(path);
-                var security = fileInfo.GetAccessControl();
-
-                // Remove inherited permissions
-                security.SetAccessRuleProtection(true, false);
-
-                // Current user
-                var currentUser = WindowsIdentity.GetCurrent().User!;
-                var userRule = new FileSystemAccessRule(
-                    currentUser,
-                    FileSystemRights.FullControl,
-                    AccessControlType.Allow
-                );
-                security.AddAccessRule(userRule);
-
-                fileInfo.SetAccessControl(security);
             }
 
             private static void ApplyUnixPermissions(string path)
@@ -94,13 +101,10 @@ namespace Secure_Store
                 }
                 catch
                 {
-                    // Fallback: hide file (less secure)
+                    // fallback: hide file (less secure)
                     File.SetAttributes(path, FileAttributes.Hidden);
                 }
             }
-
-
-
         }
     }
 }

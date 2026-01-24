@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Secure Store")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c23c26e0cb3ce4fe27b7cc577f62a44c634fb765")]
 [assembly: System.Reflection.AssemblyProductAttribute("Secure Store")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Secure Store")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
