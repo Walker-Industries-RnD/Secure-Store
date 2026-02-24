@@ -3,11 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\WalkerDev\\Documents\\GitHub\\Secure-Store\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\WalkerDev\\source\\repos\\ArchZuriel\\ArchZuriel\\bin\\Debug\\net10.0\\Mods\\Test Mod\\mod.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6B27CEEE-B7F2-47E3-9EC8-7F4C625D598C}|Secure Store.csproj|c:\\users\\walkerdev\\documents\\github\\secure-store\\securestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B27CEEE-B7F2-47E3-9EC8-7F4C625D598C}|Secure Store.csproj|solutionrelative:securestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B27CEEE-B7F2-47E3-9EC8-7F4C625D598C}|Secure Store.csproj|c:\\users\\walkerdev\\documents\\github\\secure-store\\secure store.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{6B27CEEE-B7F2-47E3-9EC8-7F4C625D598C}|Secure Store.csproj|solutionrelative:secure store.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -25,26 +26,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "mod.json",
-              "DocumentMoniker": "C:\\Users\\WalkerDev\\source\\repos\\ArchZuriel\\ArchZuriel\\bin\\Debug\\net10.0\\Mods\\Test Mod\\mod.json",
-              "RelativeDocumentMoniker": "..\\..\\..\\source\\repos\\ArchZuriel\\ArchZuriel\\bin\\Debug\\net10.0\\Mods\\Test Mod\\mod.json",
-              "ToolTip": "C:\\Users\\WalkerDev\\source\\repos\\ArchZuriel\\ArchZuriel\\bin\\Debug\\net10.0\\Mods\\Test Mod\\mod.json",
-              "RelativeToolTip": "..\\..\\..\\source\\repos\\ArchZuriel\\ArchZuriel\\bin\\Debug\\net10.0\\Mods\\Test Mod\\mod.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAACXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-25T19:07:05.519Z",
+              "DocumentIndex": 1,
+              "Title": "Secure Store",
+              "DocumentMoniker": "C:\\Users\\WalkerDev\\Documents\\GitHub\\Secure-Store\\Secure Store.csproj",
+              "RelativeDocumentMoniker": "Secure Store.csproj",
+              "ToolTip": "C:\\Users\\WalkerDev\\Documents\\GitHub\\Secure-Store\\Secure Store.csproj",
+              "RelativeToolTip": "Secure Store.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-24T21:10:39.786Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "SecureStore.cs",
               "DocumentMoniker": "C:\\Users\\WalkerDev\\Documents\\GitHub\\Secure-Store\\SecureStore.cs",
               "RelativeDocumentMoniker": "SecureStore.cs",
-              "ToolTip": "C:\\Users\\WalkerDev\\Documents\\GitHub\\Secure-Store\\SecureStore.cs*",
-              "RelativeToolTip": "SecureStore.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\WalkerDev\\Documents\\GitHub\\Secure-Store\\SecureStore.cs",
+              "RelativeToolTip": "SecureStore.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwB4AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-10T00:12:52.313Z",
               "EditorCaption": ""
