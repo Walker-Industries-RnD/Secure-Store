@@ -1,6 +1,9 @@
-﻿using System.Security.AccessControl;
-using System.Security.Principal;
+﻿using System;
+using System.IO;
 using System.Text.Json;
+using System.Runtime.InteropServices;
+using System.Security.AccessControl;
+using System.Security.Principal;
 
 namespace Secure_Store
 {
@@ -14,7 +17,6 @@ namespace Secure_Store
                 {
                     // Use per-session temp directory on all platforms
                     string sessionDir = Path.Combine(Path.GetTempPath(), "SECURE_STORE" + Environment.UserName);
-                    Directory.CreateDirectory(sessionDir);
                     return sessionDir;
                 }
             }
@@ -28,7 +30,7 @@ namespace Secure_Store
                 {
                     Directory.CreateDirectory(BasePath);
 
-                    if (OperatingSystem.IsWindows())
+                    if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                     {
                         try
                         {
@@ -67,13 +69,13 @@ namespace Secure_Store
                 string json = JsonSerializer.Serialize(value);
                 File.WriteAllText(path, json);
 
-                if (!OperatingSystem.IsWindows())
+                if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                 {
                     ApplyUnixPermissions(path);
                 }
             }
 
-            public static T? Get<T>(string key)
+            public static T Get<T>(string key)
             {
                 string path = GetPath(key);
                 if (!File.Exists(path))

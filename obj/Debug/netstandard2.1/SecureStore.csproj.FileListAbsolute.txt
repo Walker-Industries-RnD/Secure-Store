@@ -1,0 +1,11 @@
+/home/john/Downloads/Secure.Store/Secure-Store/bin/Debug/netstandard2.1/SecureStore.deps.json
+/home/john/Downloads/Secure.Store/Secure-Store/bin/Debug/netstandard2.1/SecureStore.dll
+/home/john/Downloads/Secure.Store/Secure-Store/bin/Debug/netstandard2.1/SecureStore.pdb
+/home/john/Downloads/Secure.Store/Secure-Store/obj/Debug/netstandard2.1/SecureStore.csproj.AssemblyReference.cache
+/home/john/Downloads/Secure.Store/Secure-Store/obj/Debug/netstandard2.1/SecureStore.GeneratedMSBuildEditorConfig.editorconfig
+/home/john/Downloads/Secure.Store/Secure-Store/obj/Debug/netstandard2.1/SecureStore.AssemblyInfoInputs.cache
+/home/john/Downloads/Secure.Store/Secure-Store/obj/Debug/netstandard2.1/SecureStore.AssemblyInfo.cs
+/home/john/Downloads/Secure.Store/Secure-Store/obj/Debug/netstandard2.1/SecureStore.csproj.CoreCompileInputs.cache
+/home/john/Downloads/Secure.Store/Secure-Store/obj/Debug/netstandard2.1/SecureStore.sourcelink.json
+/home/john/Downloads/Secure.Store/Secure-Store/obj/Debug/netstandard2.1/SecureStore.dll
+/home/john/Downloads/Secure.Store/Secure-Store/obj/Debug/netstandard2.1/SecureStore.pdb
